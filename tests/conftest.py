@@ -1,7 +1,7 @@
 import os
 
 import pytest_asyncio
-from blacksheep.contents import JSONContent
+from blacksheep.contents import Content, JSONContent
 from blacksheep.testing import TestClient
 
 from app.db import init_db
@@ -63,6 +63,18 @@ async def authed(client):
             return await self._c.post(
                 path,
                 content=JSONContent(json or {}),
+                cookies=self._jar,
+            )
+
+        async def post_raw(self, path):
+            return await self._c.post(path, cookies=self._jar)
+
+        async def post_text(self, path, text, content_type):
+            return await self._c.post(
+                path,
+                content=Content(
+                    content_type.encode("utf-8"), text.encode("utf-8")
+                ),
                 cookies=self._jar,
             )
 

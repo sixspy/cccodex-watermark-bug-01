@@ -12,6 +12,7 @@
       <div>
         <p class="eyebrow" id="lab-name">血缘水印台</p>
         <h1 style="margin:0;font-size:1.25rem">产出表盖印与追索</h1>
+        <span class="chip" id="pointer-chip"></span>
       </div>
       <button type="button" class="ghost" id="btn-logout">退出</button>
     </header>
@@ -20,10 +21,11 @@
       <div id="view"></div>
     </div>
     <nav class="dock">
+      <button type="button" data-tab="pointer" class="on">指针目录</button>
       <button type="button" data-tab="templates">模板</button>
-      <button type="button" data-tab="batches" class="on">批次</button>
-      <button type="button" data-tab="trace">追索</button>
-      <button type="button" data-tab="gaps">缺口</button>
+      <button type="button" data-tab="batches">盖印列表</button>
+      <button type="button" data-tab="trace">追索详情</button>
+      <button type="button" data-tab="gaps">对账水线</button>
     </nav>
   </div>
   <script src="/static/js/app.js"></script>

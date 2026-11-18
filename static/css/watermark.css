@@ -91,6 +91,39 @@ th { color: var(--muted); font-weight: 500; }
   background: #e7f5c8;
   font-size: 0.75rem;
 }
+.chip-ok { background: #d7f0b0; color: #243014; }
+.chip-bad { background: #f7d7d2; color: #7a2018; }
+.chip-row { margin: 0.6rem 0 0; color: var(--muted); font-size: 0.85rem; }
+.pointer-card {
+  margin: 0.4rem 0 1rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fbfdf8;
+}
+.pointer-card.bad { border-color: #e0a79f; background: #fdf5f4; }
+.pointer-card h3 { margin-bottom: 0.35rem; }
+.pointer-card .keys {
+  margin: 0.4rem 0 0.7rem;
+  padding-left: 1.1rem;
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 0.85rem;
+}
+.waterline {
+  display: flex;
+  gap: 0.9rem;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0.55rem 0.8rem;
+  margin: 0.5rem 0 0.9rem;
+  border-left: 4px solid #8bc34a;
+  background: #f3f8ea;
+  border-radius: 0 10px 10px 0;
+  font-size: 0.88rem;
+}
+.waterline .eyebrow { margin: 0; }
+.okline { color: #3d6b16; }
+button[disabled] { opacity: 0.5; cursor: not-allowed; }
 .muted { color: var(--muted); }
 .row { display: flex; gap: 0.5rem; flex-wrap: wrap; margin: 0.7rem 0; }
 .cardish {
